@@ -26,4 +26,4 @@ class Enrolamiento(models.Model):
     idasignatura = models.ForeignKey(Asignaturas, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.estudiante + ' ' + self.asignatura
+        return self.idestudiante + ' ' + self.idasignatura 

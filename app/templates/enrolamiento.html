@@ -1,0 +1,40 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Enrolamiento de estudiantes {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    
+    <div class="card-body">
+        <h4 class="card-title">Enrolamiento de estudiantes</h4>
+
+        <table class="table table-striped">
+            <thead>
+
+            
+                <tr>
+                    <th>ID</th>
+                    <th>Estudiante</th>
+                    <th>Asignatura</th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                {% for enrolamiento in enrolamiento %}
+                <tr>
+                    <td>{{enrolamiento.id}}</td>
+                    <td>{{enrolamiento.idestudiante}}</td>
+                    <td>{{enrolamiento.idasignatura}}</td>
+   
+                </tr>
+                {% endfor %}
+            </tbody>
+        
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de estudiantes {% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    
+    <div class="card-body">
+        <h4 class="card-title">Estudiantes</h4>
+
+        <table class="table table-striped">
+            <thead>
+
+            
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>Imagen</th>
+                    <th>Categoria</th>
+                    <th>Marca</th>
+                    <th>Año</th>
+                    <th>Valor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estudiantes in estudiantes %}
+                <tr>
+                    <td>{{estudiantes.id}}</td>
+                    <td>{{estudiantes.nombres}}</td>
+                    <td>{{estudiantes.apellidos}}</td>
+                    <td>{{estudiantes.fechaingreso}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}
