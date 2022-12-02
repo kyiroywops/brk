@@ -3,6 +3,8 @@ from .models import Estudiante, Asignaturas, Enrolamiento
 
 
 # Create your views here.
+def inicio(request):
+    return render(request, 'inicio.html')
 
 def estudiantes(request):
     estudiantes = Estudiante.objects.all()

@@ -1,0 +1,16 @@
+{% extends "paginas/base.html" %}
+{% block titulo %} Inicio {% endblock %}
+{% block contenido %}
+
+<div class="p-5 mb-4 rounded-3">
+    <div class="container-fluid py-5 d-grid gap-2">
+      <h1 class="display-5 fw-bold text-center">Bienvenidos al menú. </h1>
+ 
+      <a class="btn btn-secondary btn-lg" type="button" href="{% url 'inicio' %}">Inicio</a>
+      <a class="btn btn-secondary btn-lg" type="button" href="{% url 'estudiantes' %}">Estudiantes</a>
+      <a class="btn btn-secondary btn-lg" type="button" href="{% url 'asignaturas' %}">Asignaturas</a>
+      <a class="btn btn-secondary btn-lg" type="button" href="{% url 'enrolamiento' %}">Enrolamiento estudiantes y asignaturas</a>
+    </div>
+  </div>
+
+{% endblock %}
